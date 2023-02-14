@@ -63,7 +63,7 @@ export default class Panel extends Component {
                       Join us
                     </a>
                     <a
-                      href="/calendar"
+                      href="calendar"
                       className="text-base font-semibold leading-7 text-white"
                     >
                       Scheduler <span aria-hidden="true">→</span>
