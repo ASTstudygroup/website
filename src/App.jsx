@@ -19,6 +19,7 @@ export default class App extends Component {
       <div className="App">
         <Hero />
         <Routes> 
+          <Route path="website/" element={<Home />}></Route>
           <Route path="website/home" element={<Home />}></Route>
           <Route path="website/blog" element={<Blog />} />
           <Route path="website/blog/article/*" element={<BlogPost />} />
