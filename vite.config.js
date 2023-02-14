@@ -4,6 +4,7 @@ import react from '@vitejs/plugin-react'
 /** .... */
 import Markdown from '@pity/vite-plugin-react-markdown'
 export default defineConfig({
+  base: "/website/",
   plugins: [
     react(),
     Markdown({
