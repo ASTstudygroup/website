@@ -2,9 +2,9 @@ import { Disclosure } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
-  { name: 'Main', href: 'website/#/home', current: false },
-  { name: 'Blog', href: 'website/#/blog', current: false },
-  { name: 'Calendar', href: 'website/#/calendar', current: false },
+  { name: 'Main', href: '/#/home', current: false },
+  { name: 'Blog', href: '/#/blog', current: false },
+  { name: 'Calendar', href: '/#/calendar', current: false },
 ]
 
 function classNames(...classes) {
