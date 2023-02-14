@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import TimelineItem from "../TimelineItem/index";
 import TrackVisibility from "react-on-screen";
-import Hello from "./page/test.md";
+import Hello from "./page/brief-introduction.md";
 
 export default class index extends Component {
   history = [

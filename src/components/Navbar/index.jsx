@@ -2,23 +2,48 @@ import { Disclosure } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
-  { name: 'Main', href: 'website/#/home', current: false },
-  { name: 'Blog', href: '/#/blog', current: false },
-  { name: 'Calendar', href: '/#/calendar', current: false },
+  { name: 'Main', href: '/website/#/home', current: false },
+  { name: 'Blog', href: '/website/#/blog', current: false },
+  { name: 'Calendar', href: '/website/#/calendar', current: false },
 ]
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Example() {
-  navigation.map(item => {
-    if ( window.location.pathname.includes(item.href) ) {
-      item.current = true
-    } else false
-  }) 
-  return (
-    <Disclosure as="nav" className="bg-transparent">
+
+import React, { Component } from 'react'
+
+export default class index extends Component {
+  state = {
+    location: "",
+  }
+
+  navigation = [
+    { name: 'Main', href: '/website/#/home', current: false },
+    { name: 'Blog', href: '/website/#/blog', current: false },
+    { name: 'Calendar', href: '/website/#/calendar', current: false },
+  ]
+
+  handleClick = (event) => {
+    let name = event.target.id;
+
+    this.navigation.map(item => {
+
+      console.log(item)
+      if ( name == item.name ) {
+        console.log(name, item.name)
+        item.current = true
+      } else {
+        item.current = false
+      }
+    })
+    this.setState({location : name})
+  }
+
+  render() {
+    return (
+      <Disclosure as="nav" className="bg-transparent">
       {({ open }) => (
         <>
           <div className="mx-auto ">
@@ -37,8 +62,10 @@ export default function Example() {
               <div className="flex flex-1 items-center justify-center sm:justify-center">
                 <div className="hidden sm:block">
                   <div className="flex justify-end space-x-4">
-                    {navigation.map((item) => (
+                    {this.navigation.map((item) => (
                       <a
+                        id={item.name}
+                        onClick={this.handleClick}
                         key={item.name}
                         href={item.href}
                         className={classNames(
@@ -77,5 +104,6 @@ export default function Example() {
         </>
       )}
     </Disclosure>
-  )
+    )
+  }
 }

@@ -7,13 +7,13 @@ const post = [
         date: "2023/02/14",
         title: "Nothing",
         intro: "This is an introduction to introduct your project..",
-        href: "blog/article/introduction-to-kriging",
+        href: "/website/#/blog/article/brief-introduction",
       },
       {
         date: "2023/02/14",
         title: "Nothing",
         intro: "This is an introduction to introduct your project..",
-        href: "blog/article/test",
+        href: "/website/#/blog/article/test",
       },
     ],
   },
@@ -23,13 +23,13 @@ const post = [
         date: "2023/02/14",
         title: "Nothing",
         intro: "This is an introduction to introduct your project..",
-        href: "blog/article/intro",
+        href: "/website/#/blog/article/brief-introduction",
       },
       {
         date: "2023/02/14",
         title: "Nothing",
         intro: "This is an introduction to introduct your project..",
-        href: "blog/article/intro",
+        href: "/website/#/blog/article/intro",
       },
     ],
   },
@@ -41,7 +41,6 @@ export default class Blog extends Component {
       <div className="m-32">
         <div className="grid justify-center">
           {post.map((p) => {
-            console.log(p[Object.keys(p)[0]]);
             return (
               <>
                 <h1 className="">{Object.keys(p)[0]}</h1>

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Hello from "../Timeline/page/test.md";
+import Hello from "../Timeline/page/brief-introduction.md";
 
 const filename = window.location.pathname.substring(
   window.location.pathname.lastIndexOf("/") + 1
