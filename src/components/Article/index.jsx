@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import Hello from "../Timeline/page/brief-introduction.md";
 
-const filename = window.location.pathname.substring(
-  window.location.pathname.lastIndexOf("/") + 1
+const filename = window.location.hash.substring(
+  window.location.hash.lastIndexOf("/") + 1
 );
 const path = `../Timeline/page/${filename}.md`;
 
