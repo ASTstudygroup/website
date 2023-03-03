@@ -166,7 +166,7 @@ function Row(props) {
                     <TableRow key={historyRow.chapter}>
                       <TableCell >{historyRow.chapter}</TableCell>
                       <TableCell  align="right" component="th" scope="row">
-                        {historyRow.ppt}
+                        <a className="underline decoration-1  text-pink-600" href={historyRow.ppt}>historyRow.chapter</a>
                       </TableCell>
                       <TableCell align="right">{historyRow.googlemeet}</TableCell>
                       <TableCell align="right">{historyRow.record}</TableCell>
@@ -208,7 +208,7 @@ function createData(date, title, presenter, history) {
 }
 
 const rows = [
-  createData("2022/03/04", "python 基礎環境搭建", "DongDong", [{"record": "None", "ppt": "not available", "googlemeet": "None", "chapter": "python folder and venv"}]),
+  createData("2022/03/04", "python beginner to pro", "DongDong", [{"record": "None", "ppt": "https://www.canva.com/design/DAFapAENPzE/BXd68KShUcIhfEHh65f4lA/edit?utm_content=DAFapAENPzE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton", "googlemeet": "None", "chapter": "python basis"}]),
   createData("2022/03/11", "python 函數物件實作", "DongDong", [{"record": "None", "ppt": "not available", "googlemeet": "None", "chapter": "python function and class"}]),
   createData("2022/03/18", "python 資料科學程設", "DongDong", [{"record": "None", "ppt": "not available", "googlemeet": "None", "chapter": "python Data Science"}]),
   createData("2022/03/25", "網頁基礎架構", "DongDong", [{"record": "None", "ppt": "not available", "googlemeet": "None", "chapter": "html, css and js"}]),
